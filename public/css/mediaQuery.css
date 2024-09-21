@@ -1,0 +1,112 @@
+@media (max-width: 56em) {
+  html {
+    font-size: 50%;
+  }
+
+  .mobile-hamburger {
+    display: block;
+    z-index: 9999;
+    margin-right: -32rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+  .section {
+    padding: 10rem 3rem;
+    border-top: 1px solid #ddd;
+
+    transition: transform 1s, opacity 1s;
+  }
+
+  .header {
+    padding: 0 3rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: flex;
+    align-items: center;
+  }
+  .header__title {
+    margin-top: -50rem;
+    margin-bottom: -50rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.97);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    transform: translateX(100%);
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+  .nav__links {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    align-items: center;
+    list-style: none;
+  }
+  .nav__logo {
+    height: 4.5rem;
+    transition: all 0.3s;
+    margin-left: -10rem;
+  }
+
+  .nav__item {
+    margin-left: 4rem;
+  }
+  .nav__link:link,
+  .nav__link:visited {
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s;
+  }
+  .nav__link--btn:link,
+  .nav__link--btn:visited {
+    padding: 0.8rem 2.5rem;
+    border-radius: 3rem;
+    background-color: var(--color-primary);
+    color: #222;
+  }
+
+  .nav-open .nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .nav-open .mobile-hamburger-icon[name='close-outline'] {
+    display: block;
+  }
+  .nav-open .mobile-hamburger-icon[name='menu-outline'] {
+    display: none;
+  }
+
+  .features {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 1rem;
+  }
+
+  .features__img {
+    width: 100%;
+  }
+  .operations__tab {
+    margin-right: 2rem;
+    padding: 10px;
+  }
+  /* .btn .operations__tab {
+    padding: 1.25rem 1.5rem;
+  } */
+}
